@@ -5,43 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wingrow Markets — Map & List</title>
   <style>
-    :root {
-      --bg: #0b0f14;
-      --panel: #121821;
-      --muted: #7c8aa5;
-      --text: #e8eefc;
-      --accent: #60a5fa;
-      --accent-2: #34d399;
-      --border: #1f2a37;
-    }
-    html, body { height: 100%; margin: 0; }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--text); }
-    .app { display: flex; height: 100%; }
-    .sidebar { width: 380px; max-width: 90vw; border-right: 1px solid var(--border); background: var(--panel); display: flex; flex-direction: column; }
-    .header { padding: 16px 16px 8px; border-bottom: 1px solid var(--border); }
-    .title { font-size: 20px; font-weight: 700; margin: 0 0 8px; letter-spacing: .2px; }
-    .search { display: flex; gap: 8px; }
-    .search input { flex: 1; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border); background: #0e141c; color: var(--text); outline: none; }
-    .search button { padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border); background: #0e141c; color: var(--muted); cursor: pointer; }
-    .list { overflow: auto; padding: 8px; }
-    .item { border: 1px solid var(--border); background: #0e141c; border-radius: 14px; padding: 12px; margin: 8px; display: grid; gap: 6px; }
-    .item h3 { margin: 0; font-size: 16px; }
-    .meta { color: var(--muted); font-size: 13px; }
-    .tags { display: flex; gap: 6px; flex-wrap: wrap; }
-    .chip { font-size: 11px; padding: 4px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
-    .actions { display: flex; gap: 8px; margin-top: 4px; }
-    .btn { padding: 8px 10px; border-radius: 10px; border: 1px solid var(--border); background: #101725; color: var(--text); cursor: pointer; font-size: 13px; }
-    .btn.primary { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: #0b1020; font-weight: 700; border: none; }
-    .mapwrap { flex: 1; }
-    .mapwrap iframe { border: 0; width: 100%; height: 100%; display: block; }
-
-    .footer { padding: 8px 12px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; text-align: center; }
-
-    @media (max-width: 900px) {
-      .app { flex-direction: column; }
-      .sidebar { width: 100%; max-width: none; }
-      .mapwrap { height: 60vh; }
-    }
+    :root{--bg:#0b0f14;--panel:#121821;--muted:#7c8aa5;--text:#e8eefc;--accent:#60a5fa;--accent-2:#34d399;--border:#1f2a37}
+    html,body{height:100%;margin:0}body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",Arial; background:var(--bg);color:var(--text)}
+    .app{display:flex;height:100%}.sidebar{width:380px;max-width:90vw;border-right:1px solid var(--border);background:var(--panel);display:flex;flex-direction:column}
+    .header{padding:16px 16px 8px;border-bottom:1px solid var(--border)}.title{font-size:20px;font-weight:700;margin:0 0 8px;letter-spacing:.2px}
+    .search{display:flex;gap:8px}.search input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:#0e141c;color:var(--text);outline:none}
+    .search button{padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:#0e141c;color:var(--muted);cursor:pointer}
+    .list{overflow:auto;padding:8px}.item{border:1px solid var(--border);background:#0e141c;border-radius:14px;padding:12px;margin:8px;display:grid;gap:6px}
+    .item h3{margin:0;font-size:16px}.meta{color:var(--muted);font-size:13px}.tags{display:flex;gap:6px;flex-wrap:wrap}
+    .chip{font-size:11px;padding:4px 8px;border-radius:999px;border:1px solid var(--border);color:var(--muted)}.actions{display:flex;gap:8px;margin-top:4px}
+    .btn{padding:8px 10px;border-radius:10px;border:1px solid var(--border);background:#101725;color:var(--text);cursor:pointer;font-size:13px}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#0b1020;font-weight:700;border:none}.mapwrap{flex:1}
+    .mapwrap iframe{border:0;width:100%;height:100%;display:block}.footer{padding:8px 12px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;text-align:center}
+    @media (max-width:900px){.app{flex-direction:column}.sidebar{width:100%;max-width:none}.mapwrap{height:60vh}}
   </style>
 </head>
 <body>
@@ -50,129 +26,30 @@
       <div class="header">
         <h1 class="title">Wingrow Markets</h1>
         <div class="search">
-          <input id="q" type="search" placeholder="Search by city, location, or address…" />
+          <input id="q" type="search" placeholder="Search by name, day, or address…" />
           <button id="clearBtn" title="Clear">✕</button>
         </div>
       </div>
       <div class="list" id="list"></div>
-      <div class="footer">Click a market to center the Google Map • Add/edit markets in the code ↓</div>
+      <div class="footer">Click a market to center the map • Data from markets.json</div>
     </aside>
-
     <main class="mapwrap">
-      <!-- Google Maps (no API key needed) → we use q=lat,lng embed -->
       <iframe id="gmap" loading="lazy" allowfullscreen
         src="https://www.google.com/maps?q=18.5204,73.8567&z=11&output=embed"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main>
   </div>
-
   <script>
-    // ===== 1) Your markets: add/modify freely =====
-    // Minimal fields needed: name, city, address, lat, lng
-    const MARKETS = [
-      {
-        name: "Ivy Estate Market",
-        city: "Pune",
-        address: "Ivy Estate, Wagholi, Pune",
-        lat: 18.5919, lng: 73.9791,
-        tags: ["Weekly", "Farmers to Consumers"]
-      },
-      {
-        name: "Magarpatta Market",
-        city: "Pune",
-        address: "Magarpatta City, Hadapsar, Pune",
-        lat: 18.5145, lng: 73.9274,
-        tags: ["Offers", "Fruits & Veg"]
-      },
-      {
-        name: "Morjai Devi Mandir Market",
-        city: "Pimpri-Chinchwad",
-        address: "Morjai Devi Mandir, Morwadi, Pimpri-Chinchwad 411018",
-        lat: 18.6273, lng: 73.8017,
-        tags: ["New Opening", "Pimpri"]
-      },
-      {
-        name: "Dombivli East Market",
-        city: "Mumbai Metropolitan Region",
-        address: "Dombivli East, Near Railway Station",
-        lat: 19.2094, lng: 73.0939,
-        tags: ["MMR", "Weekly"]
-      }
-    ];
-
-    // ===== 2) Rendering =====
-    const listEl = document.getElementById('list');
-    const gmap = document.getElementById('gmap');
-    const q = document.getElementById('q');
-    const clearBtn = document.getElementById('clearBtn');
-
-    function gmapEmbedSrc(lat, lng, z = 15) {
-      return `https://www.google.com/maps?q=${lat},${lng}&z=${z}&output=embed`;
-    }
-
-    function gmapDirectionsUrl(lat, lng, name) {
-      const label = encodeURIComponent(name || 'Destination');
-      return `https://www.google.com/maps/dir/?api=1&destination=${lat}%2C${lng}&destination_place_id=&travelmode=driving&dir_action=navigate&destination_name=${label}`;
-    }
-
-    function gmapViewUrl(lat, lng) {
-      return `https://www.google.com/maps/search/?api=1&query=${lat}%2C${lng}`;
-    }
-
-    function marketCard(mkt, index) {
-      const id = `m-${index}`;
-      const tags = (mkt.tags || []).map(t => `<span class="chip">${t}</span>`).join('');
-      return `
-        <div class="item" data-index="${index}">
-          <h3>${mkt.name}</h3>
-          <div class="meta">${mkt.city}</div>
-          <div class="meta">${mkt.address}</div>
-          <div class="tags">${tags}</div>
-          <div class="actions">
-            <button class="btn primary" data-action="show" data-index="${index}">Show on Map</button>
-            <a class="btn" href="${gmapViewUrl(mkt.lat, mkt.lng)}" target="_blank" rel="noopener">Open in Google Maps</a>
-            <a class="btn" href="${gmapDirectionsUrl(mkt.lat, mkt.lng, mkt.name)}" target="_blank" rel="noopener">Directions</a>
-          </div>
-        </div>
-      `;
-    }
-
-    function renderList(items) {
-      listEl.innerHTML = items.map(marketCard).join('');
-    }
-
-    // Initial render
-    renderList(MARKETS);
-
-    // Click handling (event delegation)
-    listEl.addEventListener('click', (e) => {
-      const btn = e.target.closest('[data-action="show"]');
-      if (!btn) return;
-      const index = +btn.dataset.index;
-      const m = (q.value ? filterMarkets(q.value) : MARKETS)[index];
-      if (!m) return;
-      gmap.src = gmapEmbedSrc(m.lat, m.lng, 16);
-    });
-
-    // ===== 3) Simple search/filter =====
-    function filterMarkets(text) {
-      const t = text.trim().toLowerCase();
-      if (!t) return MARKETS;
-      return MARKETS.filter(m =>
-        [m.name, m.city, m.address].some(v => String(v).toLowerCase().includes(t))
-      );
-    }
-
-    function liveFilter() {
-      const filtered = filterMarkets(q.value);
-      renderList(filtered);
-    }
-
-    q.addEventListener('input', liveFilter);
-    clearBtn.addEventListener('click', () => { q.value = ''; liveFilter(); q.focus(); });
-
-    // Focus search on load (desktop nicety)
-    window.addEventListener('load', () => { try { q.focus(); } catch {} });
+    const listEl=document.getElementById('list');const gmap=document.getElementById('gmap');const q=document.getElementById('q');const clearBtn=document.getElementById('clearBtn');let MARKETS=[];
+    const gmapEmbedSrc=(lat,lng,z=15)=>`https://www.google.com/maps?q=${lat},${lng}&z=${z}&output=embed`;
+    const gmapDirectionsUrl=(lat,lng,name)=>{const label=encodeURIComponent(name||'Destination');return`https://www.google.com/maps/dir/?api=1&destination=${lat}%2C${lng}&travelmode=driving&destination_name=${label}`};
+    const gmapViewUrl=(lat,lng)=>`https://www.google.com/maps/search/?api=1&query=${lat}%2C${lng}`;
+    const marketCard=(mkt,index)=>{const tags=(mkt.tags||[]).map(t=>`<span class="chip">${t}</span>`).join('');return `<div class="item" data-index="${index}"><h3>${mkt.name}</h3><div class="meta">${mkt.city||''}</div><div class="meta">${mkt.address||''}</div><div class="tags">${tags}</div><div class="actions"><button class="btn primary" data-action="show" data-index="${index}">Show on Map</button><a class="btn" href="${gmapViewUrl(mkt.lat,mkt.lng)}" target="_blank" rel="noopener">Open in Google Maps</a><a class="btn" href="${gmapDirectionsUrl(mkt.lat,mkt.lng,mkt.name)}" target="_blank" rel="noopener">Directions</a></div></div>`};
+    const renderList=items=>{listEl.innerHTML=items.map(marketCard).join('')};
+    listEl.addEventListener('click',e=>{const btn=e.target.closest('[data-action="show"]');if(!btn)return;const index=+btn.dataset.index;const items=q.value?filterMarkets(q.value):MARKETS;const m=items[index];if(!m)return;gmap.src=gmapEmbedSrc(m.lat,m.lng,16)});
+    const filterMarkets=text=>{const t=text.trim().toLowerCase();if(!t)return MARKETS;return MARKETS.filter(m=>[m.name,m.city,m.address,...(m.tags||[])].some(v=>String(v||'').toLowerCase().includes(t)))};
+    const liveFilter=()=>renderList(filterMarkets(q.value));q.addEventListener('input',liveFilter);clearBtn.addEventListener('click',()=>{q.value='';liveFilter();q.focus()});
+    async function loadMarkets(){const res=await fetch('markets.json',{cache:'no-store'});MARKETS=await res.json();renderList(MARKETS)};loadMarkets();window.addEventListener('load',()=>{try{q.focus()}catch{}});
   </script>
 </body>
 </html>

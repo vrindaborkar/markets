@@ -1,0 +1,206 @@
+[
+  {
+    "name": "Karvenagar",
+    "city": "",
+    "address": "In front of Vibhavari-Asawari Apartment and Sahawas Society Street No-1, Near Bhujbal Peruchi Bag, Karvenagar, Pune-52 ",
+    "lat": 18.4955875049347,
+    "lng": 73.8184985846566,
+    "tags": [
+      "Tuesday"
+    ]
+  },
+  {
+    "name": "Godrej Prana",
+    "city": "",
+    "address": "In front of Godrej Prana Society Gate & Godrej Greens Society Road, Kondhwa -Katraj Road, Undri, Pune- 48",
+    "lat": 18.4552920362542,
+    "lng": 73.9138772153433,
+    "tags": []
+  },
+  {
+    "name": "Dhanori",
+    "city": "",
+    "address": "Infront of Goodwill Breeza Society, Dhanori",
+    "lat": 18.6019938625116,
+    "lng": 73.9041310441791,
+    "tags": []
+  },
+  {
+    "name": "Morjai",
+    "city": "",
+    "address": "Morjai Devi Mandir, Morwadi, Pimpri Chinchwad-411018",
+    "lat": 18.6331504479689,
+    "lng": 73.8046165423283,
+    "tags": []
+  },
+  {
+    "name": "Sadesatara Nali",
+    "city": "",
+    "address": "Near Naren Bliss Society , Opposite Gandharva Galaxia, Sadesatra Nali-Amanora Rd, Hadapsar, Pune, Maharashtra-411028.",
+    "lat": 18.5307967846815,
+    "lng": 73.9325030576716,
+    "tags": [
+      "Wednesday"
+    ]
+  },
+  {
+    "name": "Godrej Horizon",
+    "city": "",
+    "address": "In front of Nirmaann Serene Society, Near Godrej Horizon Society, Punekar Chowk, Undri, Pune - 60",
+    "lat": 18.4551160050207,
+    "lng": 73.9192969079398,
+    "tags": []
+  },
+  {
+    "name": "Gera Kharadi IT Park",
+    "city": "",
+    "address": "Near Entry Gate of Gera's Green Ville Society and Opposite to Gera Imperium Alpha, Vitthal Nagar, Kharadi -14",
+    "lat": 18.5630503126476,
+    "lng": 73.9573710236524,
+    "tags": []
+  },
+  {
+    "name": "Gujarwadi",
+    "city": "",
+    "address": "VastuShree Residency, Sopankaka Nagar Road, Gujar-Nimbalkarwadi, Katraj, Pune \u2013 411046",
+    "lat": 18.4376332533761,
+    "lng": 73.8689091360955,
+    "tags": []
+  },
+  {
+    "name": "Kharadi IT Park",
+    "city": "",
+    "address": "Besides Shubh Augusta Society and Forest County Gate No.3, Dadasaheb Pathare Chowk, Kharadi, Pune - 14",
+    "lat": 18.5588062236668,
+    "lng": 73.9480621576716,
+    "tags": [
+      "Thursday"
+    ]
+  },
+  {
+    "name": "Manjri Khurd",
+    "city": "",
+    "address": "Near Boulevard Co-operative Housing Society main gate, Manjari Khurd, Pune, Maharashtra 412307",
+    "lat": 18.5383084959545,
+    "lng": 73.980659,
+    "tags": []
+  },
+  {
+    "name": "Bopodi",
+    "city": "",
+    "address": "Near Devi orchid society and near Pune IT Park ,Bhau Patil Road, Bopodi Pune -20",
+    "lat": 18.5736670082045,
+    "lng": 73.8308716081672,
+    "tags": []
+  },
+  {
+    "name": "More Corner",
+    "city": "",
+    "address": "Besides More Corner, Rohan Abhilasha Society Road, More Wasti, Wagholi, Pune- 412207",
+    "lat": 18.5904561199073,
+    "lng": 73.9663471576716,
+    "tags": [
+      "Friday"
+    ]
+  },
+  {
+    "name": "Bramhasun",
+    "city": "",
+    "address": "Club House Road, Near Bramha Suncity Society Circle, Vadgoan Sheri, Pune -14",
+    "lat": 18.5470747230474,
+    "lng": 73.9193005962982,
+    "tags": []
+  },
+  {
+    "name": "Kothrud",
+    "city": "",
+    "address": "Damodar Villa, Opposite Kothrud Bus Stand, Karve Road, Pune 411038",
+    "lat": 18.5019837832919,
+    "lng": 73.8215053066613,
+    "tags": []
+  },
+  {
+    "name": "Navsahyadri",
+    "city": "",
+    "address": "Navsahyadri Society Ground, Karvenagar, Pune -52",
+    "lat": 18.4957004073687,
+    "lng": 73.8281300576716,
+    "tags": []
+  },
+  {
+    "name": "Bhavadi Road",
+    "city": "",
+    "address": "Aditya Nandanvan Society, in front of Majestique Manhattan Society, Bhavadi Road, Pune-412207",
+    "lat": 18.5888319455885,
+    "lng": 73.9879499350319,
+    "tags": [
+      "Saturday"
+    ]
+  },
+  {
+    "name": "Grandeur Undri",
+    "city": "",
+    "address": "In Front of Dynamic Grandeur Society Gate, Wadachi Wadi Road, Undri, Pune-60",
+    "lat": 18.4497232044554,
+    "lng": 73.9135035711641,
+    "tags": []
+  },
+  {
+    "name": "Baif Road",
+    "city": "",
+    "address": "In front of Green Groves Society Ground, Dabhade Chowk, Baif Road, Wagholi, Pune- 412207",
+    "lat": 18.5754071126094,
+    "lng": 73.9766730525318,
+    "tags": []
+  },
+  {
+    "name": "Ganga Constella",
+    "city": "",
+    "address": "Infront of Kumar Primrose Society and Beside Ganga Constella Society, DP Farms Road, Pandurang Nagar, Kharadi-14",
+    "lat": 18.5566933178482,
+    "lng": 73.949274311137,
+    "tags": []
+  },
+  {
+    "name": "Magarpatta",
+    "city": "",
+    "address": "Beside Kumar paradise B1 building, BG Shirke road, Magarpatta ,Pune ",
+    "lat": 18.5227060131992,
+    "lng": 73.92773909603,
+    "tags": [
+      "Sunday"
+    ]
+  },
+  {
+    "name": "Amanora",
+    "city": "",
+    "address": "Side of leisure town ,Behind of Amenora fire station , Sadesatara nali, Hadapsar, Pune",
+    "lat": 18.5149195426023,
+    "lng": 73.9453898,
+    "tags": []
+  },
+  {
+    "name": "Ivy Estate",
+    "city": "",
+    "address": "Near Apartment Entry Gate and Club House, Ivy Estate, Wagholi, Pune- 412207",
+    "lat": 18.5842656420482,
+    "lng": 74.0031701,
+    "tags": []
+  },
+  {
+    "name": "Kumar Kurti",
+    "city": "",
+    "address": "Add-Infront of Kumar Kurti Society, Main Gate & Beside Cybage Tower, Kalyani Nagar, Pune-411032",
+    "lat": 18.5477584162186,
+    "lng": 73.9114329865075,
+    "tags": []
+  },
+  {
+    "name": "More Baug",
+    "city": "",
+    "address": "Morebag Main Gate, HP Gas Godown More Baug, Katraj, Pune- 411046",
+    "lat": 18.4569785927258,
+    "lng": 73.8548221137411,
+    "tags": []
+  }
+]
